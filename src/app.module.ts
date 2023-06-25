@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UpInsertModule } from './up-insert/up-insert.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
@@ -18,18 +17,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: process.env.PG_USER,
       password: process.env.PG_PASSWORD,
       database: process.env.PG_DB,
-      entities: [__dirname + 'entities/**/*.{ts,js}'],
+      entities: ["dist/**/*{.ts,.js}"],
       synchronize: true,
-    }),
-    UpInsertModule],
+    })],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {
-  constructor() {
-    console.log(__dirname);
-    
-    
-  }
-  
-}
+export class AppModule {}

@@ -1,96 +1,96 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
-@Entity('assetHierarchy', { schema: 'dbo' })
+@Entity('assetHierarchy')
 export class AssetHierarchy {
-  @Column('int', { name: 'isParent', nullable: true })
+  @Column()
   isParent: number | null;
 
-  @Column('varchar', { name: 'description', nullable: true })
+  @Column()
   description: string | null;
 
-  @Column('varchar', { name: 'pid', nullable: true })
+  @Column()
   pid: string | null;
 
   @PrimaryColumn('varchar', { name: 'id', nullable: false })
   id: string | null;
 
-  @Column('nvarchar', { name: 'plant_desc', nullable: true })
+  @Column()
   plant_desc: string | null;
 
-  @Column('nvarchar', { name: 'plt_serial_no', nullable: true })
+  @Column()
   plt_serial_no: string | null;
 
-  @Column('nvarchar', { name: 'plt_model', nullable: true })
+  @Column()
   plt_model: string | null;
 
-  @Column('nvarchar', { name: 'plt_manufacturer', nullable: true })
+  @Column()
   plt_manufacturer: string | null;
 
-  @Column('nvarchar', { name: 'plt_supplier', nullable: true })
+  @Column()
   plt_supplier: string | null;
 
-  @Column('nvarchar', { name: 'plt_capital_cost', nullable: true })
+  @Column()
   plt_capital_cost: string | null;
 
-  @Column('nvarchar', { name: 'warranty_date', nullable: true })
+  @Column()
   warranty_date: string | null;
 
-  @Column('nvarchar', { name: 'plant_type', nullable: true })
+  @Column()
   plant_type: string | null;
 
-  @Column('nvarchar', { name: 'plant_no', nullable: true })
+  @Column()
   plant_no: string | null;
 
-  @Column('nvarchar', { name: 'plt_attached_to', nullable: true })
+  @Column()
   plt_attached_to: string | null;
 
-  @Column('nvarchar', { name: 'attached_to_2', nullable: true })
+  @Column()
   attached_to_2: string | null;
 
-  @Column('nvarchar', { name: 'plt_parent_job', nullable: true })
+  @Column()
   plt_parent_job: string | null;
 
-  @Column('nvarchar', { name: 'plt_type_codes_1', nullable: true })
+  @Column()
   plt_type_codes_1: string | null;
 
-  @Column('nvarchar', { name: 'plt_type_codes_2', nullable: true })
+  @Column()
   plt_type_codes_2: string | null;
 
-  @Column('nvarchar', { name: 'plt_type_codes_3', nullable: true })
+  @Column()
   plt_type_codes_3: string | null;
 
-  @Column('nvarchar', { name: 'plt_type_codes_4', nullable: true })
+  @Column()
   plt_type_codes_4: string | null;
 
-  @Column('nvarchar', { name: 'plt_actual_mtbf', nullable: true })
+  @Column()
   plt_actual_mtbf: string | null;
 
-  @Column('nvarchar', { name: 'last_fail_date', nullable: true })
+  @Column()
   last_fail_date: string | null;
 
-  @Column('nvarchar', { name: 'total_failures', nullable: true })
+  @Column()
   total_failures: string | null;
 
-  @Column('nvarchar', { name: 'avg_weekly_usage', nullable: true })
+  @Column()
   avg_weekly_usage: string | null;
 
-  @Column('nvarchar', { name: 'plt_target_mtbf', nullable: true })
+  @Column()
   plt_target_mtbf: string | null;
 
-  @Column('nvarchar', { name: 'plt_condition', nullable: true })
+  @Column()
   plt_condition: string | null;
 
-  @Column('nvarchar', { name: 'changeout_cost', nullable: true })
+  @Column()
   changeout_cost: string | null;
 
-  @Column('nvarchar', { name: 'PLT_BOM_ID', nullable: true })
+  @Column()
   PLT_BOM_ID: string | null;
 
-  @Column('nvarchar', { name: 'total_cost', nullable: true })
+  @Column()
   total_cost: string | null;
 
-  @Column('nvarchar', { name: 'mat_total_cost', nullable: true })
+  @Column()
   mat_total_cost: string | null;
 
-  @Column('int', { name: 'level_num', nullable: true })
+  @Column()
   level_num: number | null;
 }
