@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { NpmController } from './services/run/npm/npm.controller';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -20,7 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: ["dist/**/*{.ts,.js}"],
       synchronize: true,
     })],
-  controllers: [AppController],
+  controllers: [AppController, NpmController],
   providers: [AppService],
 })
 export class AppModule {}
