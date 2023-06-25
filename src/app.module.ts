@@ -18,11 +18,18 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: process.env.PG_USER,
       password: process.env.PG_PASSWORD,
       database: process.env.PG_DB,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      entities: [__dirname + 'entities/**/*.{ts,js}'],
       synchronize: true,
     }),
     UpInsertModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    console.log(__dirname);
+    
+    
+  }
+  
+}

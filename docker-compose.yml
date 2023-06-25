@@ -1,19 +1,5 @@
 version: '3.9'
 services:
-  nestapp:
-    container_name: nestapp
-    image: francescoxx/nestapp:1.0.0
-    build: .
-    ports:
-      - '3000:3000'
-    environment:
-      - PG_USER=postgres
-      - PG_PASSWORD=postgres
-      - PG_DB=postgres
-      - PG_PORT=5432
-      - PG_HOST=localhost
-    depends_on:
-      - db
   db:
     container_name: db
     image: postgres:12
@@ -21,6 +7,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+      POSTGRES_HOST: localhost:5432
     ports:
       - '5432:5432'
     volumes:
